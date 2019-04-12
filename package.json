@@ -1,7 +1,7 @@
 {
   "name": "react-search-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "## What is the App?",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
