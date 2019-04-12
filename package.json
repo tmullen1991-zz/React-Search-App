@@ -4,8 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,8 +22,14 @@
     "url": "https://github.com/tmullen1991/React-Search-App/issues"
   },
   "homepage": "https://github.com/tmullen1991/React-Search-App#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.11"
+  },
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.4",
-    "mongoose": "^5.4.21"
+    "if-env": "^1.0.4",
+    "mongoose": "^5.5.1"
   }
 }
