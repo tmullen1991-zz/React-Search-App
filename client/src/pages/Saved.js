@@ -41,9 +41,12 @@ class App extends Component {
           <Row>
             <Col size="xs-12">
               {!this.state.books.length ? (
-                <h1 className="m-2 text-center">No Books Saved</h1>
+                <div >
+                <h1 className="m-3 text-center">No Books Saved</h1>
+                </div>
               ) : (
                 <div>
+                  <h1 className="m-2 text-center">Books Saved to Databse:</h1>
                   {this.state.books.map(book => (
                     <div key={book._id}>
                       <li className="list-group-item m-1">

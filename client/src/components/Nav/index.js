@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/">Google Books Search API</Navbar.Brand>
+        <Navbar.Brand href="/">Google Books Search and Save</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto ">
